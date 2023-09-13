@@ -1,0 +1,31 @@
+Sections:
+	.init       type:code
+	extab       type:rodata
+	extabindex  type:rodata
+	.text       type:code
+	.ctors      type:rodata
+	.dtors      type:rodata
+	.rodata     type:rodata
+	.data       type:data
+	.bss        type:bss
+	.sdata      type:data
+	.sbss       type:bss
+	.sdata2     type:rodata
+	.sbss2      type:bss
+
+Runtime.PPCEABI.H/global_destructor_chain.c:
+	.text       start:0x80006638 end:0x80006698
+	.dtors      start:0x800764C0 end:0x800764C4
+	.sbss       start:0x800C40B8 end:0x800C40C0
+
+Runtime.PPCEABI.H/__init_cpp_exceptions.cpp:
+	.text       start:0x8000732C end:0x800073A8
+	.ctors      start:0x800764A0 end:0x800764A4
+	.dtors      start:0x800764C4 end:0x800764C8
+	.sdata      start:0x800C3E70 end:0x800C3E78
+
+Runtime.PPCEABI.H/Gecko_ExceptionPPC.cp:
+	extab       start:0x80005748 end:0x800057BC
+	extabindex  start:0x8000582C end:0x80005880
+	.text       start:0x800073A8 end:0x800087D4
+	.bss        start:0x800866B0 end:0x800866C0
